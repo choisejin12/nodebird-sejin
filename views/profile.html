@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <div class="timeline">
+    <div class="followings half">
+      <h2>팔로잉 목록</h2>
+      {% if user.Followings %}
+        {% for following in user.Followings %}
+          <div>{{following.nick}}</div>
+        {% endfor %}
+      {% endif %}
+    </div>
+    <div class="followers half">
+      <h2>팔로워 목록</h2>
+      {% if user.Followers %}
+        {% for follower in user.Followers %}
+          <div>{{follower.nick}}</div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <div>
+      <a href="/" style="margin-top:50px; text-decoration:none; display:inline-block; border: 1px solid silver;  border-radius: 5px; padding: 4px 8px; color: crimson; font-size: 12px;  cursor: pointer;">메인화면</a>
+    </div>
+  </div>
+{% endblock %}

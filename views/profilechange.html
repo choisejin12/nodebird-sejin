@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="nick-change">
+        <form action="/user/newnick" method="post">
+            <label for="" style="size:12px">수정할 닉네임을 입력하세요</label>
+            <input type="text" name="newnick" id="newnick">
+            <input type="submit" value="변경" class="btn">
+        </form>
+    </div>
+{% endblock %}
+
